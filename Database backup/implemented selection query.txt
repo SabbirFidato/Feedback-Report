@@ -1,0 +1,19 @@
+select posts.postid, posts.post,ul.username, FORMAT(posts.posteddatetime,('dd/MM/yyyy')) as dateandtime
+	,(select COUNT(*) from comments where comments.postid=posts.postid) totalcomments
+from posts
+inner join userlist ul on ul.userid=posts.posterid
+------------------------------------------------------------------all posts
+
+
+select posts.post, posts.posterid,com.comment, com.commentid, ul.username, FORMAT(com.commentdatatime,('dd/MM/yyyy')) as dateandtime
+, (select  COUNT(*) from votes where votes.commentid=com.commentid and liked=1) as likes
+, (select  COUNT(*) from votes where votes.commentid=com.commentid and disliked=1) as dislikes
+from comments as com
+inner join userlist ul on ul.userid=com.commentatorid
+inner join posts on com.postid=posts.postid
+where posts.postid= 1
+order by posts.posterid
+-------------------------------------------------comments by post
+
+
+

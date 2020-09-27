@@ -1,0 +1,97 @@
+USE [Feedback]
+GO
+
+INSERT INTO [dbo].[userlist]([userid],[username],[loginid],[password]) VALUES(1, 'A', 'a', '123');
+INSERT INTO [dbo].[userlist]([userid],[username],[loginid],[password]) VALUES(2, 'B', 'b', '123');
+INSERT INTO [dbo].[userlist]([userid],[username],[loginid],[password]) VALUES(3, 'C', 'c', '123');
+INSERT INTO [dbo].[userlist]([userid],[username],[loginid],[password]) VALUES(4, 'D', 'd', '123');
+INSERT INTO [dbo].[userlist]([userid],[username],[loginid],[password]) VALUES(5, 'E', 'e', '123');
+
+GO
+
+------------------------ insert data into userlist table
+
+
+USE [Feedback]
+GO
+
+INSERT INTO [dbo].[posts]([postid],[post],[posterid],[posteddatetime]) VALUES(1, 'Post1', 1, GETDATE());
+INSERT INTO [dbo].[posts]([postid],[post],[posterid],[posteddatetime]) VALUES(2, 'Post2', 2, GETDATE());
+INSERT INTO [dbo].[posts]([postid],[post],[posterid],[posteddatetime]) VALUES(3, 'Post3', 3, GETDATE());
+GO
+
+------------------------ insert data into posts table
+
+USE [Feedback]
+GO
+
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(1,'Comment1',1,2, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(2,'Comment2',1,3, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(3,'Comment3',1,4, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(4,'Comment4',2,1, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(5,'Comment5',2,3, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(6,'Comment6',2,4, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(7,'Comment7',2,5, GETDATE());
+INSERT INTO [dbo].[comments]([commentid],[comment],[postid],[commentatorid],[commentdatatime])VALUES(8,'Comment8',3,1, GETDATE());
+GO
+
+------------------------ insert data into comments table
+
+
+USE [Feedback]
+GO
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(1,1,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(2,1,2,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(3,1,3,1); 
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(4,1,4,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(5,1,5,1);
+
+
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(6,2,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(7,2,2,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(8,2,3,1); 
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(9,2,4,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(10,2,5,1);
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(11,3,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(12,3,2,1);
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(13,4,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(14,4,2,1);
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(15,5,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(16,5,2,1);
+
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(17,6,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(18,6,2,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(19,6,3,1); 
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(20,6,4,1);
+
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(21,7,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(22,7,2,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(23,7,3,1); 
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(24,7,4,1);
+
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(25,8,1,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[liked]) VALUES(26,8,2,1);
+
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(27,8,3,1);
+INSERT INTO [dbo].[votes]([voteid],[commentid],[userid],[disliked]) VALUES(28,8,4,1);
+
+GO
+
+------------------------ insert data into votes table
+
+
+
+
+
